@@ -179,11 +179,21 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
       <div class="titulo-card">¡Aventura en el Irtra!</div>
       <div class="desc-card">El viernes <strong>24 de abril</strong> compartimos un viaje inolvidable. Alumnos de <strong>Escolaris, Montano Cortijo y Montano Portal Los Álamos</strong> se unieron para disfrutar de juegos, risas y mucha convivencia escolar.</div>
     </div>
-    <!-- 3 FOTOS -->
-    <div class="galeria-grid">
-      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra1.jpeg" alt="Irtra 1" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?auto=format&fit=crop&w=600&q=80'">
-      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra2.jpeg" alt="Irtra 2" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1576085898323-218337e3e43c?auto=format&fit=crop&w=600&q=80'">
-      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra3.jpeg" alt="Irtra 3" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1525126838385-b912dbcc68a4?auto=format&fit=crop&w=600&q=80'">
+    <!-- 5 FOTOS (Carrusel) -->
+    <div style="padding: 0 36px 16px;">
+      <div class="car" id="cIrtra">
+        <div class="car-track" id="ctIrtra">
+          <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra1.jpeg" alt="Irtra 1" onerror="this.src='https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?auto=format&fit=crop&w=800&q=80'">
+          <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra2.jpeg" alt="Irtra 2" onerror="this.src='https://images.unsplash.com/photo-1576085898323-218337e3e43c?auto=format&fit=crop&w=800&q=80'">
+          <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra3.jpeg" alt="Irtra 3" onerror="this.src='https://images.unsplash.com/photo-1525126838385-b912dbcc68a4?auto=format&fit=crop&w=800&q=80'">
+          <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra4.jpeg" alt="Irtra 4" onerror="this.src='https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?auto=format&fit=crop&w=800&q=80'">
+          <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra5.jpeg" alt="Irtra 5" onerror="this.src='https://images.unsplash.com/photo-1518306057864-16982eb4b232?auto=format&fit=crop&w=800&q=80'">
+        </div>
+        <button class="cbtn cprev" onclick="mv('cIrtra', -1)">‹</button>
+        <button class="cbtn cnext" onclick="mv('cIrtra', 1)">›</button>
+        <div class="ccnt" id="ccIrtra">1 / 5</div>
+      </div>
+      <div class="cdots" id="cdIrtra"></div>
     </div>
     <!-- 2 VIDEOS -->
     <div class="video-grid">
@@ -299,7 +309,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
 
 <script>
 const S = {};
-const CARS = ['cLectura'];
+const CARS = ['cLectura', 'cIrtra'];
 
 function initCar(id) {
   if (S[id]) return;
