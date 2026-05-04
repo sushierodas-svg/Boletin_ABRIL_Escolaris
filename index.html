@@ -21,6 +21,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
 /* HEADER */
 .header { background: var(--azul); }
 .header-top { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 3px solid var(--naranja); }
+.logo-img { height: 45px; width: auto; display: block; }
 .logo-text { color: white; font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 900; }
 .mes-badge { background: var(--naranja); color: white; font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; padding: 8px 24px; border-radius: 30px; letter-spacing: 1px; }
 
@@ -113,6 +114,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
 
 @media (max-width: 700px) {
   .header-top { padding: 12px 16px; }
+  .logo-img { height: 35px; }
   .contenido { padding: 0 12px 40px; }
   .info-pad { padding: 24px; }
   .galeria-grid { padding: 0 24px 24px 24px; }
@@ -128,7 +130,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
 
 <header class="header">
   <div class="header-top">
-    <div class="logo-text">Escolaris</div>
+    <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/logo.png" alt="Escolaris" class="logo-img">
     <div class="mes-badge">Boletín de Abril</div>
   </div>
 </header>
@@ -155,6 +157,21 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
         <div class="ev-tit">Reunión Global Exchange</div>
         <div class="ev-desc">Nuestra primera reunión informativa preparatoria para el intercambio cultural en el extranjero (UK 2026).</div>
       </div>
+    </div>
+  </div>
+
+  <!-- PRÓXIMA CONVIVENCIA: TEATRO -->
+  <div class="card">
+    <div class="info-pad">
+      <div class="tag" style="color: var(--naranja);">🎭 Próxima Convivencia Escolaris</div>
+      <div class="titulo-card">¡Vamos al Teatro juntos!</div>
+      <div class="desc-card">Invitamos a toda la familia Escolaris a compartir una mañana llena de arte, música y diversión disfrutando de la obra de teatro <strong>"SING"</strong>.<br><br>
+      📅 <strong>Fecha:</strong> Domingo 17 de mayo a las 11:00 horas.<br>
+      📍 <strong>Lugar:</strong> Sala de Teatro "Manuel Galich", Universidad Popular (10a. calle 10-32 zona 1).<br><br>
+      🎟️ <strong>Para asistir:</strong> Revisa el afiche aquí abajo para conocer los precios (Preventa Q60 / Taquilla Q75). Para realizar tus reservaciones o pedir más información, <strong>comunícate directamente a los teléfonos o al WhatsApp de la Universidad Popular</strong> indicados en la imagen. ¡No te lo pierdas!</div>
+    </div>
+    <div style="padding: 0 36px 36px;">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/teatro.JPG" alt="Afiche Obra de Teatro SING" style="width: 100%; max-width: 500px; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block; margin: 0 auto;" onerror="this.src='https://images.unsplash.com/photo-1507676184212-d0330a15233c?auto=format&fit=crop&w=600&q=80'">
     </div>
   </div>
 
@@ -303,7 +320,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
 </main>
 
 <footer style="background: var(--azul); color: rgba(255,255,255,0.7); text-align: center; padding: 32px 24px;">
-  <div class="logo-text" style="font-size: 20px; margin-bottom: 10px;">Escolaris</div>
+  <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/logo.png" alt="Escolaris" style="height: 40px; width: auto; margin: 0 auto 12px; display: block;">
   <div style="font-size: 11px; opacity: 0.5;">© 2026 Colegio Escolaris · Boletín Abril 2026</div>
 </footer>
 
