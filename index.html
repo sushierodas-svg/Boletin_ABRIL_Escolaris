@@ -70,6 +70,8 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
 /* ALUMNO DEL MES */
 .alumno-card { background: var(--azul); border-radius: 18px; padding: 36px; color: white; display: flex; gap: 30px; align-items: center; }
 .al-icono { font-size: 60px; flex-shrink: 0; background: rgba(255,255,255,0.1); width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid var(--amarillo); }
+.al-foto { flex-shrink: 0; width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 4px solid var(--amarillo); box-shadow: 0 4px 15px rgba(0,0,0,0.2); background: var(--crema); }
+.al-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .al-tit { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--amarillo); margin-bottom: 10px; }
 .al-desc { font-size: 15px; line-height: 1.6; opacity: 0.9; margin-bottom: 16px; }
 .btn-cdag { display: inline-block; background: var(--naranja); color: white; text-decoration: none; padding: 8px 20px; border-radius: 20px; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
@@ -99,6 +101,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
   .galeria-grid { padding: 0 24px 24px 24px; }
   .eventos-grid { grid-template-columns: 1fr; }
   .alumno-card { flex-direction: column; text-align: center; padding: 24px; }
+  .al-foto { margin: 0 auto; width: 120px; height: 120px; }
   .video-container { padding: 24px 16px; }
 }
 </style>
@@ -114,7 +117,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
 
 <div class="hero-container">
   <!-- ENCABEZADO ACTUALIZADO A RUTA GITHUB -->
-  <img src="https://sushierodas-svg.github.io/boletin-abril/encabezado.png" alt="Boletín Escolaris Abril - Owlaris" onerror="this.src='https://images.unsplash.com/photo-1546410531-bea5acadb6a0?auto=format&fit=crop&w=900&q=80'">
+  <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/encabezado.png" alt="Boletín Escolaris Abril - Owlaris" onerror="this.src='https://images.unsplash.com/photo-1546410531-bea5acadb6a0?auto=format&fit=crop&w=900&q=80'">
 </div>
 
 <div class="banner">
@@ -145,9 +148,9 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
       <div class="desc-card">El sábado <strong>18 de abril</strong>, nos reunimos con los tres colegios que están inscritos en el programa Especialízate. ¡Una jornada llena de energía, competencia sana y compañerismo!</div>
     </div>
     <div class="galeria-grid">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/foto1.jpeg" alt="Deportes 1" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80'">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/foto2.jpeg" alt="Deportes 2" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=600&q=80'">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/foto3.jpeg" alt="Deportes 3" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1526566762798-8fac9c07aa98?auto=format&fit=crop&w=600&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto1.jpeg" alt="Deportes 1" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto2.jpeg" alt="Deportes 2" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=600&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto3.jpeg" alt="Deportes 3" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1526566762798-8fac9c07aa98?auto=format&fit=crop&w=600&q=80'">
     </div>
   </div>
 
@@ -160,18 +163,18 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
     </div>
     <!-- 3 FOTOS -->
     <div class="galeria-grid">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/irtra1.jpeg" alt="Irtra 1" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?auto=format&fit=crop&w=600&q=80'">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/irtra2.jpeg" alt="Irtra 2" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1576085898323-218337e3e43c?auto=format&fit=crop&w=600&q=80'">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/irtra3.jpeg" alt="Irtra 3" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1525126838385-b912dbcc68a4?auto=format&fit=crop&w=600&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra1.jpeg" alt="Irtra 1" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?auto=format&fit=crop&w=600&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra2.jpeg" alt="Irtra 2" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1576085898323-218337e3e43c?auto=format&fit=crop&w=600&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/irtra3.jpeg" alt="Irtra 3" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1525126838385-b912dbcc68a4?auto=format&fit=crop&w=600&q=80'">
     </div>
     <!-- 2 VIDEOS -->
     <div class="video-grid">
       <video controls class="video-item">
-        <source src="https://sushierodas-svg.github.io/boletin-abril/video1.mp4" type="video/mp4">
+        <source src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/video1.mp4" type="video/mp4">
         Tu navegador no soporta videos.
       </video>
       <video controls class="video-item">
-        <source src="https://sushierodas-svg.github.io/boletin-abril/video2.mp4" type="video/mp4">
+        <source src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/video2.mp4" type="video/mp4">
         Tu navegador no soporta videos.
       </video>
     </div>
@@ -184,8 +187,8 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
       <div class="titulo-card">5° Festival de Arte</div>
       <div class="desc-card">El <strong>28 de abril</strong> celebramos el talento, la creatividad y la imaginación de nuestros alumnos en nuestra tradicional exposición artística. ¡Una muestra espectacular del arte en Escolaris!</div>
     </div>
-    <div class="galeria-grid" style="grid-template-columns: 1fr;">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/arte-1.png" alt="Festival de Arte" class="foto-item" style="height: auto; max-height: 450px;" onerror="this.src='https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80'">
+    <div style="padding: 0 36px 36px;">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/arte-1.png" alt="Festival de Arte" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block;" onerror="this.src='https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80'">
     </div>
   </div>
 
@@ -197,30 +200,26 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
       <div class="desc-card">El jueves <strong>23 de abril</strong> nos sumergimos en nuevas historias. Gracias a todos los que participaron. ¡Los esperamos con mucha emoción para nuestro Club de lectura de <strong>Mayo</strong>!</div>
     </div>
     <div class="galeria-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/foto1.PNG" alt="Lectura 1" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&q=80'">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/foto2.PNG" alt="Lectura 2" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80'">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/foto3.PNG" alt="Lectura 3" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=400&q=80'">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/foto4.PNG" alt="Lectura 4" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80'">
-      <img src="https://sushierodas-svg.github.io/boletin-abril/foto5.PNG" alt="Lectura 5" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto1.PNG" alt="Lectura 1" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto2.PNG" alt="Lectura 2" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto3.PNG" alt="Lectura 3" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=400&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto4.PNG" alt="Lectura 4" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80'">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto5.PNG" alt="Lectura 5" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80'">
     </div>
   </div>
 
   <!-- ALUMNO DEL MES -->
   <div class="sec"><div class="dot"></div><h2>Orgullo Escolaris</h2><div class="linea"></div></div>
   
-  <div class="alumno-card" style="border-radius: 18px 18px 0 0; margin-bottom: 0;">
-    <div class="al-icono">🏹</div>
+  <div class="alumno-card" style="border-radius: 18px; margin-bottom: 24px;">
+    <div class="al-foto">
+      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/nicolas.PNG" alt="Nicolás Briz" onerror="this.src='https://images.unsplash.com/photo-1563299796-17596c35a7ea?auto=format&fit=crop&w=400&q=80'">
+    </div>
     <div>
       <div class="tag amarillo">Alumno del Mes</div>
       <div class="al-tit">¡Felicidades, Nicolás Briz!</div>
-      <div class="al-desc">Destacada participación en Tiro con Arco. Nicolás ha puesto en alto a nuestro país y a nuestro colegio al ganar <strong>Medalla de Plata</strong> en competencias internacionales desarrolladas en Estados Unidos y El Salvador. ¡Estamos muy orgullosos de ti!</div>
-      <a href="https://cdag.com.gt/arqueros-guatemaltecos-destacan-en-competencias-internacionales-en-estados-unidos-y-el-salvador/" target="_blank" class="btn-cdag" style="background: rgba(255,255,255,0.2); margin-top: 10px;">Abrir en nueva pestaña</a>
+      <div class="al-desc" style="margin-bottom: 0;">Destacada participación en Tiro con Arco. Nicolás ha puesto en alto a nuestro país y a nuestro colegio al ganar <strong>Medalla de Plata</strong> en competencias internacionales desarrolladas en Estados Unidos y El Salvador.<br><br>Su esfuerzo, disciplina y pasión por el deporte son un verdadero orgullo y ejemplo para toda la comunidad Escolaris. ¡Sigue cosechando éxitos!</div>
     </div>
-  </div>
-  
-  <div class="iframe-container" style="border-radius: 0 0 18px 18px; border-top: none; margin-bottom: 24px;">
-    <!-- Ventana integrada de la noticia de Nicolás -->
-    <iframe src="https://cdag.com.gt/arqueros-guatemaltecos-destacan-en-competencias-internacionales-en-estados-unidos-y-el-salvador/" title="Noticia CDAG Nicolás Briz"></iframe>
   </div>
 
   <!-- VIDEO DESTACADO (CANVA) -->
