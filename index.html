@@ -63,9 +63,26 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
 
 /* EVENTOS PEQUEÑOS (Resumen) */
 .eventos-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 24px; }
-.ev-info { padding: 20px; display: flex; flex-direction: column; justify-content: center; }
-.ev-tit { font-size: 16px; font-weight: 800; color: var(--azul); margin-bottom: 6px; line-height: 1.2; }
-.ev-desc { font-size: 13px; color: var(--suave); line-height: 1.5; }
+.evento-card { background: white; border-radius: 16px; display: flex; align-items: stretch; overflow: hidden; box-shadow: 0 4px 15px rgba(36,75,90,0.06); border: 1px solid rgba(0,0,0,0.05); }
+.ev-fecha { background: var(--azul); color: white; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 120px; text-align: center; }
+.ev-dia { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900; color: var(--amarillo); line-height: 1; margin-bottom: 4px; }
+.ev-mes { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: white; }
+.ev-info { padding: 24px; display: flex; flex-direction: column; justify-content: center; }
+.ev-tit { font-size: 18px; font-weight: 800; color: var(--azul); margin-bottom: 8px; line-height: 1.2; }
+.ev-desc { font-size: 14px; color: var(--suave); line-height: 1.6; }
+
+/* CARRUSEL */
+.car { position: relative; background: #1a3542; border-radius: 12px; overflow: hidden; margin-bottom: 12px; }
+.car-track { display: flex; transition: transform 0.35s ease; }
+.car-track img { width: 100%; flex-shrink: 0; display: block; object-fit: contain; max-height: 500px; }
+.cbtn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(36,75,90,0.8); color: white; border: none; cursor: pointer; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: background 0.2s; z-index: 2; }
+.cbtn:hover { background: var(--naranja); }
+.cprev { left: 12px; }
+.cnext { right: 12px; }
+.ccnt { position: absolute; bottom: 10px; right: 14px; background: rgba(0,0,0,0.55); color: white; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+.cdots { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.cdot { width: 10px; height: 10px; border-radius: 50%; background: #d0d7de; border: none; cursor: pointer; transition: background 0.2s; padding: 0; }
+.cdot.on { background: var(--naranja); }
 
 /* ALUMNO DEL MES */
 .alumno-card { background: var(--azul); border-radius: 18px; padding: 36px; color: white; display: flex; gap: 30px; align-items: center; }
@@ -83,7 +100,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
 
 /* VIDEO PANEL */
 .video-container { background: var(--azul); padding: 36px; display: flex; flex-direction: column; align-items: center; border-radius: 18px; color: white; text-align: center; margin-bottom: 24px; }
-.video-wrapper { width: 100%; max-width: 700px; aspect-ratio: 16/9; background: #1a3542; border-radius: 12px; overflow: hidden; margin-top: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.video-wrapper { width: 100%; max-width: 700px; height: 550px; background: #1a3542; border-radius: 12px; overflow: hidden; margin-top: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 .video-wrapper iframe { width: 100%; height: 100%; border: none; }
 
 /* CONTACTO CURSOS */
@@ -103,6 +120,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
   .alumno-card { flex-direction: column; text-align: center; padding: 24px; }
   .al-foto { margin: 0 auto; width: 120px; height: 120px; }
   .video-container { padding: 24px 16px; }
+  .video-wrapper { height: 400px; }
 }
 </style>
 </head>
@@ -192,19 +210,27 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
     </div>
   </div>
 
-  <!-- CLUB DE LECTURA (5 Fotos) -->
+  <!-- CLUB DE LECTURA (Carrusel de 5 Fotos) -->
   <div class="card">
     <div class="info-pad">
       <div class="tag">📚 Actividad Literaria</div>
       <div class="titulo-card">Nuestro Club de Lectura</div>
       <div class="desc-card">El jueves <strong>23 de abril</strong> nos sumergimos en nuevas historias. Gracias a todos los que participaron. ¡Los esperamos con mucha emoción para nuestro Club de lectura de <strong>Mayo</strong>!</div>
     </div>
-    <div class="galeria-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
-      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto1.PNG" alt="Lectura 1" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&q=80'">
-      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto2.PNG" alt="Lectura 2" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80'">
-      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto3.PNG" alt="Lectura 3" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=400&q=80'">
-      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto4.PNG" alt="Lectura 4" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80'">
-      <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto5.PNG" alt="Lectura 5" class="foto-item" onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80'">
+    <div style="padding: 0 36px 36px;">
+      <div class="car" id="cLectura">
+        <div class="car-track" id="ctLectura">
+          <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto1.PNG" alt="Lectura 1" onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80'">
+          <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto2.PNG" alt="Lectura 2" onerror="this.src='https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80'">
+          <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto3.PNG" alt="Lectura 3" onerror="this.src='https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80'">
+          <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto4.PNG" alt="Lectura 4" onerror="this.src='https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80'">
+          <img src="https://sushierodas-svg.github.io/Boletin_ABRIL_Escolaris/foto5.PNG" alt="Lectura 5" onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80'">
+        </div>
+        <button class="cbtn cprev" onclick="mv('cLectura', -1)">‹</button>
+        <button class="cbtn cnext" onclick="mv('cLectura', 1)">›</button>
+        <div class="ccnt" id="ccLectura">1 / 5</div>
+      </div>
+      <div class="cdots" id="cdLectura"></div>
     </div>
   </div>
 
@@ -231,8 +257,8 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
     <p style="opacity: 0.8; font-size: 15px; max-width: 600px;">Te invitamos a ver el excelente trabajo en video realizado por Carlos Andrés. Haz clic en reproducir para disfrutar de su tarea destacada.</p>
     
     <div class="video-wrapper">
-      <!-- Enlace adaptado a modo "embed" de Canva para que se reproduzca aquí -->
-      <iframe src="https://www.canva.com/design/DAHE0nzcBjc/JIwzDQZwRGH11GExaJ5YbQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <!-- Enlace adaptado a modo "watch" de Canva con permisos de audio/video -->
+      <iframe src="https://www.canva.com/design/DAHE0nzcBjc/JIwzDQZwRGH11GExaJ5YbQ/watch?embed" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
     </div>
   </div>
 
@@ -271,5 +297,58 @@ body { font-family: 'Nunito', sans-serif; background: var(--crema); color: var(-
   <div style="font-size: 11px; opacity: 0.5;">© 2026 Colegio Escolaris · Boletín Abril 2026</div>
 </footer>
 
+<script>
+const S = {};
+const CARS = ['cLectura'];
+
+function initCar(id) {
+  if (S[id]) return;
+  const track = document.getElementById('ct' + id.slice(1));
+  if (!track) return;
+  const total = track.querySelectorAll('img').length;
+  S[id] = { cur: 0, total };
+  const dotsEl = document.getElementById('cd' + id.slice(1));
+  if (dotsEl) {
+    dotsEl.innerHTML = '';
+    for (let i = 0; i < total; i++) {
+      const d = document.createElement('button');
+      d.className = 'cdot' + (i === 0 ? ' on' : '');
+      d.onclick = () => go(id, i);
+      dotsEl.appendChild(d);
+    }
+  }
+}
+
+function render(id) {
+  const s = S[id];
+  const track = document.getElementById('ct' + id.slice(1));
+  if (track) track.style.transform = `translateX(-${s.cur * 100}%)`;
+  const cnt = document.getElementById('cc' + id.slice(1));
+  if (cnt) cnt.textContent = `${s.cur + 1} / ${s.total}`;
+  const dots = document.querySelectorAll('#cd' + id.slice(1) + ' .cdot');
+  dots.forEach((d, i) => {
+    if(i === s.cur) d.classList.add('on');
+    else d.classList.remove('on');
+  });
+}
+
+function mv(id, dir) {
+  initCar(id);
+  const s = S[id];
+  if (!s) return;
+  s.cur = (s.cur + dir + s.total) % s.total;
+  render(id);
+}
+
+function go(id, idx) {
+  initCar(id);
+  S[id].cur = idx;
+  render(id);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  CARS.forEach(id => initCar(id));
+});
+</script>
 </body>
 </html>
